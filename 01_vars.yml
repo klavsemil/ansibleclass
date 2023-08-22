@@ -32,7 +32,7 @@
 
     - name: Is httpd running
       ansible.builtin.debug:
-            msg: httpd is running
+        msg: httpd is running
       when: httpd_status.state == "started"
 
       rescue:
