@@ -22,7 +22,12 @@
         state: started
         enabled: true
       register: httpd_status
-    
+
     - name: Show Status
       ansible.builtin.debug:
         var: httpd_status
+
+    - name: Is httpd running
+      ansible.builtin.debug:
+        msg: httpd is running
+      when: httpd_status.state == "started"
