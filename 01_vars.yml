@@ -1,10 +1,11 @@
 ---
-- name: Vars
+- name: Vars List
   hosts: linuxservers
   become: true
 
   vars:
-    - package: httpd
+    package: 
+    - httpd
     - mariadb-server
     - php
     - php-mysqlnd
